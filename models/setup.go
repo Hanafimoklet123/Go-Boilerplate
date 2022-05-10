@@ -16,4 +16,7 @@ func ConnectDatabase() {
 	if err != nil {
 		panic(err)
 	}
+	database.AutoMigrate(&Book{})
+
+	DB = database
 }
